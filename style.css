@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #141519;
+  font-family: Overpass, Arial, Helvetica, sans-serif;
+  color: #feffff;
+}
+.card-container {
+  background-color: #212832;
+  padding: 1.5rem;
+  width: 20rem;
+  border-radius: 1rem;
+}
+.card-container > div.hidden {
+  display: none;
+}
+/* || Start card-rating */
+.card-container .star {
+  display: inline-block;
+  background-image: url('images/icon-star.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 8%;
+  border-radius: 50%;
+  background-color: #262f38;
+}
+.card-container h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.card-container p {
+  font-size: 0.8rem;
+  color: #989fa9;
+  line-height: 1.5;
+}
+.rating-circles {
+  display: flex;
+  justify-content: space-between;
+  margin: 8% 0;
+}
+.rating-circles .circle {
+  display: flex;
+  outline: 0;
+  justify-content: center;
+  align-items: center;
+  color: #989fa9;
+  background-color: #262f38;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rating-circles .circle:hover {
+  background-color: #7c8896;
+  color: #f0f7ff;
+}
+.rating-circles .circle.active {
+  background-color: hsl(25, 97%, 53%);
+  color: #f0f7ff;
+}
+.card-rating .btn {
+  background-color: hsl(25, 97%, 53%);
+  border: 0;
+  outline: 0;
+  border-radius: 1rem;
+  color: inherit;
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.card-rating .btn:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: #ffffff;
+}
+.card-rating .btn:active {
+  transform: scale(0.98);
+}
+/* || End card-rating */
+
+/* || Start card-thanks */
+.card-thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-thanks img {
+  width: 55%;
+}
+.card-thanks .score_result {
+  width: fit-content;
+  margin: 1rem 0;
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+  color: hsl(25, 97%, 53%);
+  background-color: #262f38;
+}
+.card-thanks p {
+  text-align: center;
+}
+/* || End card-thanks */
+
+.attribution {
+  position: absolute;
+  bottom: 5%;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    width: 90%;
+    min-width: 280px;
+  }
+}
